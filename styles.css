@@ -1,0 +1,226 @@
+body {
+    text-align: center;
+    background-image: url(making-flints.jpg);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 1.5vw;
+}
+
+a{
+    color: black;
+}
+
+
+#banner-text{
+    background-color: white;
+    display: inline-block;
+    padding: 20px;
+    margin:20px;
+    width: 60vw;
+    font-size: 30px;
+    border: 10px black solid;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+
+
+
+.Characters a{
+    background-color: white;
+    font-family: 'Kalam', cursive;;
+    text-decoration: none;
+    padding:0.5vw;
+    margin-top:3vw;
+    text-shadow: none;
+    display: none;  /*initially hide 'Learn More'*/
+}
+
+.Characters a:active{
+    background-color: black;
+    color:white
+}
+
+
+
+.Characters{
+    margin-top: 20px;
+    display: flex; /*Flexbox*/
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.manga{
+    width: 17vw;
+    height:27vw;
+    display: block;
+    margin: 0 auto; /*center manga image*/
+    margin-top: 0.5vw;
+}
+
+.anime {
+    display: none; /*initially hide anime image*/
+    border-radius: 3% 50% 3% 50%;
+    border: 4px white solid;
+    height:15vw;
+    width:15vw;
+    margin: 0 auto; /*center anime image*/
+    
+}
+
+.description{
+    display:none;
+    border-radius: 20px;
+    text-align: left;
+    padding: 1vw;
+    padding-bottom: 0.3vw;
+    margin-bottom:1.3vw;
+    margin-top:1vw;
+    background-color: rgba(17, 16, 16, 0.783);
+    font-size: 1vw;
+    text-shadow: 1px 1px black;
+}
+
+
+
+#Senku,#Chrome,#Kohaku,#Gen,#Ukyo,#Ryusui,#Tsukasa,#Suika {
+    border: 10px  dashed black;
+    margin: 0.7vw;
+    margin-top:5vw;
+    border-radius: 2vw;
+    padding:20px;
+    width:20vw;
+    background-color: rgb(255, 255, 255); 
+    transition: all 1s ease; 
+    height: 37vw; 
+    box-shadow: 0.3vw 0.3vw rgba(255, 255, 255, 0.697), 0.9vw 0.9vw rgba(0, 0, 0, 0.905);
+   
+}
+
+
+
+
+/*Media Query for mobile*/
+
+@media(max-width:768px){
+    body{
+        background-color: white;
+        background-image: none;
+        
+    }
+
+    #banner-text{
+        background-image: url(science.jpg);
+        filter: saturate(1.8);
+        background-size: cover;
+        color: white;
+        text-shadow:2px 2px black ;
+        border: white solid;
+    }
+
+    #Senku,#Chrome,#Kohaku,#Gen,#Ukyo,#Ryusui,#Tsukasa,#Suika {
+        border: 1px  solid rgb(0, 0, 0);
+        margin: 0.7vw;
+        margin-top:2vw;
+        border-radius: 2vw;
+        padding:4vw;
+        width:30vw;
+        background-color: rgb(150, 99, 60);
+        height: 55vw;
+        color: white;
+        font-size: 2vw;
+        text-shadow: 2px 2px black;
+        box-shadow: none;
+
+
+       
+    }
+
+    .Characters a{
+        display: initial;
+    }
+
+    .anime{
+        display: block;
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .manga{
+        display: none;
+    }
+
+    .description{
+        display: block;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.884);
+        font-size: 2vw;
+        padding:1vw;
+    }
+
+}
+
+
+@media(min-width: 769px){
+/*Show characters on hover*/
+
+#banner-text:hover{
+    background-image: url(science.jpg);
+    background-size: cover;
+    background-position: 1% 33%;
+    color: rgba(250, 235, 215, 0);
+    filter: brightness(1.3);
+}
+
+
+#Senku:hover, #Kohaku:hover, #Gen:hover, #Chrome:hover,#Tsukasa:hover, 
+    #Suika:hover, #Ukyo:hover, #Ryusui:hover{
+    background-image: url(anime-background.jpg);
+    background-size: cover;
+    color: white;
+    font-size: larger;
+    text-shadow: 2px 2px black;
+    border: rgb(255, 255, 255) 7px solid;
+    transform: scale(1.05); /* Adjust the scale factor */
+    transition: all 0.3s ease-in; /* Apply transition to all properties */
+   
+}
+
+
+/*Show 'Learn more' on hover*/
+#Senku:hover a, #Kohaku:hover a, #Gen:hover a, #Chrome:hover a,#Tsukasa:hover a, 
+    #Suika:hover a, #Ukyo:hover a, #Ryusui:hover a{
+    display: initial;
+}
+
+/*Underline 'Learn more' on hover*/
+#Senku a:hover, #Kohaku a:hover, #Gen a:hover, #Chrome a:hover, #Tsukasa a:hover, 
+    #Suika a:hover, #Ukyo a:hover, #Ryusui a:hover{
+    text-decoration: underline;
+}
+
+/*Show anime image on hover*/
+#Senku:hover .anime, #Kohaku:hover .anime, #Gen:hover .anime, #Chrome:hover .anime, 
+    #Tsukasa:hover .anime, #Ukyo:hover .anime, #Ryusui:hover .anime,
+    #Suika:hover .anime{
+    display: block;
+}
+
+/*Show description on hover*/
+#Senku:hover .description, #Kohaku:hover .description,  #Gen:hover .description,  
+    #Chrome:hover .description,   #Tsukasa:hover .description,  
+    #Suika:hover .description, #Ukyo:hover .description,
+    #Ryusui:hover .description {
+    display: block; 
+    
+}
+
+/*Hide manga image on hover*/
+#Senku:hover .manga, #Kohaku:hover .manga, #Gen:hover .manga,
+    #Chrome:hover .manga, #Suika:hover .manga, #Tsukasa:hover .manga,
+    #Ukyo:hover .manga, #Ryusui:hover .manga{
+    display: none;
+}
+
+}
+
